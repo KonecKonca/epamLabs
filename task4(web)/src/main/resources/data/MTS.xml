@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs xmlns="http://www.example.com/tariffs">
+
+    <limit-tariff>
+        <name>Start1</name>
+        <operator-name>MTS</operator-name>
+        <sms-price>12</sms-price>
+        <parameters>
+            <tariffication>per_30_second</tariffication>
+            <pay-for-connection>15</pay-for-connection>
+        </parameters>
+        <price-in-minute-external-calls>15</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>12</price-in-minute-inner-calls>
+        <price-for-mb-internet>7</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Start2</name>
+        <operator-name>MTS</operator-name>
+        <sms-price>2</sms-price>
+        <parameters>
+            <tariffication>per_minute</tariffication>
+            <pay-for-connection>20</pay-for-connection>
+        </parameters>
+        <price-in-minute-external-calls>10</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>8</price-in-minute-inner-calls>
+        <price-for-mb-internet>6</price-for-mb-internet>
+    </limit-tariff>
+
+    <unlimit-tariff is-inner-calls="true" is-external-calls="true" is-internet="false">
+        <name>Unlim0</name>
+        <operator-name>MTS</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters favourite-number="+375259550317">
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>3</pay-for-connection>
+        </parameters>
+
+        <payroll>20</payroll>
+    </unlimit-tariff>
+
+    <unlimit-tariff is-inner-calls="true" is-external-calls="true" is-internet="true">
+        <name>Unlim1</name>
+        <operator-name>MTS</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters favourite-number="+375259550317">
+            <tariffication>per_30_second</tariffication>
+            <pay-for-connection>7</pay-for-connection>
+        </parameters>
+
+        <payroll>40</payroll>
+    </unlimit-tariff>
+
+</tariffs>

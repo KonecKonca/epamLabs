@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs xmlns="http://www.example.com/tariffs">
+
+    <limit-tariff>
+        <name>Start</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>100</sms-price>
+
+        <parameters>
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>0</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>30</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>33</price-in-minute-inner-calls>
+        <price-for-mb-internet>30</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Family1</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters>
+            <tariffication>per_30_second</tariffication>
+            <pay-for-connection>20</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>10</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>13</price-in-minute-inner-calls>
+        <price-for-mb-internet>3</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Family2</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters>
+            <tariffication>per_30_second</tariffication>
+            <pay-for-connection>25</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>8</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>11</price-in-minute-inner-calls>
+        <price-for-mb-internet>2</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Family3</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters>
+            <tariffication>per_30_second</tariffication>
+            <pay-for-connection>30</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>5</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>6</price-in-minute-inner-calls>
+        <price-for-mb-internet>0</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Lemon</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>99</sms-price>
+
+        <parameters favourite-number="+375259550314">
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>40</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>0</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>3</price-in-minute-inner-calls>
+        <price-for-mb-internet>0</price-for-mb-internet>
+    </limit-tariff>
+
+    <unlimit-tariff is-internet="false" is-external-calls="false" is-inner-calls="false">
+        <name>Cheaper</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>10</sms-price>
+        <parameters favourite-number="+375259550317">
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>0</pay-for-connection>
+        </parameters>
+        <payroll>5</payroll>
+    </unlimit-tariff>
+
+    <unlimit-tariff is-inner-calls="true" is-external-calls="true" is-internet="true">
+        <name>Richer</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>40</sms-price>
+        <parameters>
+            <tariffication>per_minute</tariffication>
+            <pay-for-connection>5</pay-for-connection>
+        </parameters>
+        <payroll>45</payroll>
+    </unlimit-tariff>
+
+</tariffs>

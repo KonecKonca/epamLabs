@@ -1,0 +1,29 @@
+names:
+  - Milk
+  - Meat
+  - Bread
+  - Sugar
+  - Cofe
+  - Tomato
+  - Potato
+  - Cucumber
+  - Carrot
+  - Cabage
+  - Oil
+
+prices:
+  - 1.15
+  - 9.36
+  - 0.68
+  - 1.13
+  - 3.47
+  - 2.96
+  - 0.53
+  - 1.68
+  - 0.87
+  - 0.45
+  - 1.79
+
+types:
+  - perishable
+  - not

@@ -1,0 +1,7 @@
+maxProductId: 999000
+
+nameMinSize: 3
+nameMaxSize: 256
+
+minPrice: 0.1
+maxPrice: 100000.0

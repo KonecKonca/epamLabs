@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs xmlns="http://www.example.com/tariffs">
+
+    <limit-tariff>
+        <name>SuperTar</name>
+        <operator-name>Life</operator-name>
+        <sms-price>99</sms-price>
+
+        <parameters favourite-number="+375259550314">
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>40</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>0</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>13</price-in-minute-inner-calls>
+        <price-for-mb-internet>2</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Business1</name>
+        <operator-name>Life</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters favourite-number="+375259550317">
+            <tariffication>per_minute</tariffication>
+            <pay-for-connection>50</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>2</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>3</price-in-minute-inner-calls>
+        <price-for-mb-internet>0</price-for-mb-internet>
+    </limit-tariff>
+
+    <limit-tariff>
+        <name>Business2</name>
+        <operator-name>Life</operator-name>
+        <sms-price>0</sms-price>
+
+        <parameters favourite-number="+375259550317">
+            <tariffication>per_minute</tariffication>
+            <pay-for-connection>50</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>1</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>2</price-in-minute-inner-calls>
+        <price-for-mb-internet>4</price-for-mb-internet>
+    </limit-tariff>
+
+    <unlimit-tariff is-inner-calls="true" is-external-calls="false" is-internet="true">
+        <name>LiteUnlim</name>
+        <operator-name>Life</operator-name>
+        <sms-price>10</sms-price>
+        <parameters>
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>40</pay-for-connection>
+        </parameters>
+        <payroll>50</payroll>
+    </unlimit-tariff>
+
+    <unlimit-tariff is-inner-calls="true" is-external-calls="true" is-internet="true">
+        <name>MaxUnlim</name>
+        <operator-name>Life</operator-name>
+        <sms-price>0</sms-price>
+        <parameters>
+            <tariffication>per_minute</tariffication>
+            <pay-for-connection>6</pay-for-connection>
+        </parameters>
+        <payroll>65</payroll>
+    </unlimit-tariff>
+
+</tariffs>

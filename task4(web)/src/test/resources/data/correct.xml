@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs xmlns="http://www.example.com/tariffs">
+
+    <limit-tariff>
+        <name>Lemon1</name>
+        <operator-name>Velcome</operator-name>
+        <sms-price>99</sms-price>
+
+        <parameters favourite-number="+375259550314">
+            <tariffication>per_12_second</tariffication>
+            <pay-for-connection>40</pay-for-connection>
+        </parameters>
+
+        <price-in-minute-external-calls>0</price-in-minute-external-calls>
+        <price-in-minute-inner-calls>13</price-in-minute-inner-calls>
+        <price-for-mb-internet>0</price-for-mb-internet>
+    </limit-tariff>
+
+</tariffs>

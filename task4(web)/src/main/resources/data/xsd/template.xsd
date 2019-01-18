@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema  xmlns="http://www.w3.org/2001/XMLSchema"
+         targetNamespace="http://www.example.com/tariffs"
+         xmlns:tns="http://www.example.com/tariffs"
+         elementFormDefault="qualified">
+
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element ref="tns:tariff" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="tariff" type="tns:Tariff" abstract="true"/>
+    <element name="unlimit-tariff" type="tns:UnlimitTariff" substitutionGroup="tns:tariff"/>
+    <element name="limit-tariff" type="tns:LimitTariff" substitutionGroup="tns:tariff"/>
+
+
+
+    <complexType name="Tariff">
+        <sequence>
+            <element name="name" type="tns:Name"/>
+            <element name="operator-name" type="tns:Operator-Name"/>
+            <element name="sms-price" type="double"/>
+            <element name="parameters" type="tns:Parameters"/>
+        </sequence>
+    </complexType>
+    <complexType name="Parameters">
+        <sequence>
+            <element name="tariffication" type="tns:Tariffication"/>
+            <element name="pay-for-connection" type="double"/>
+        </sequence>
+        <attribute name="favourite-number" type="tns:Favourite-Number" use="optional"/>
+    </complexType>
+
+    <complexType name="UnlimitTariff">
+        <complexContent>
+            <extension base="tns:Tariff">
+                <sequence>
+                    <element name="payroll" type="double"/>
+                </sequence>
+                <attribute name="is-inner-calls" type="boolean" use="required"/>
+                <attribute name="is-external-calls" type="boolean" use="required"/>
+                <attribute name="is-internet" type="boolean" use="required"/>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="LimitTariff">
+        <complexContent>
+            <extension base="tns:Tariff">
+                <sequence>
+                    <element name="price-in-minute-external-calls" type="double"/>
+                    <element name="price-in-minute-inner-calls" type="double"/>
+                    <element name="price-for-mb-internet" type="double"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <simpleType name="Tariffication">
+        <restriction base="string">
+            <enumeration value="per_minute"/>
+            <enumeration value="per_12_second"/>
+            <enumeration value="per_30_second"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Name">
+        <restriction base="string">
+            <pattern value="\w+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Operator-Name">
+        <restriction base="string">
+            <enumeration value="Velcome"/>
+            <enumeration value="Life"/>
+            <enumeration value="MTS"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Favourite-Number">
+        <restriction base="string">
+            <pattern value="\+375\d{9}"/>
+        </restriction>
+    </simpleType>
+
+
+</schema>

@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="MainSuit" annotations="JDK" parallel="tests">
+
+    <test name="CommonTest">
+        <classes>
+            <class name="com.kozitski.xml.builder.XmlBuilderFactoryTest"/>
+            <class name="com.kozitski.xml.validator.SchemeValidatorTest"/>
+            <class name="com.kozitski.xml.logic.ShowXmlReceiverTest"/>
+            <class name="com.kozitski.xml.command.CommandFactoryTest"/>
+
+        </classes>
+    </test>
+
+    <test name="PapserTest">
+        <classes>
+            <class name="com.kozitski.xml.builder.SaxXmlBuilderTest"/>
+            <class name="com.kozitski.xml.builder.StaxXmlBuilderTest"/>
+            <class name="com.kozitski.xml.builder.DomXmlBuilderTest"/>
+
+        </classes>
+    </test>
+
+    <test name="TimeTest">
+        <classes>
+            <class name="com.kozitski.xml.time.TimeTest"/>
+        </classes>
+    </test>
+
+</suite>

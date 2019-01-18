@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="MainSuit" annotations="JDK" parallel="tests">
+
+    <test name="RepositoryTest">
+        <classes>
+            <class name="com.kozitski.triangle.repository.TriangleRepositoryTest"/>
+        </classes>
+    </test>
+
+    <test name="MainTest">
+        <classes>
+            <class name="com.kozitski.triangle.register.TriangleRegisterTest"/>
+            <class name="com.kozitski.triangle.service.TriangleOperationTest"/>
+            <class name="com.kozitski.triangle.util.parser.PointParserTest"/>
+            <class name="com.kozitski.triangle.util.reader.TXTPointReaderTest"/>
+            <class name="com.kozitski.triangle.util.TriangleUtilTest"/>
+            <class name="com.kozitski.triangle.validator.PointForTriangleValidator"/>
+            <class name="com.kozitski.triangle.validator.TriangleValidatorTest"/>
+        </classes>
+    </test>
+
+    <test name="TimeTest">
+        <classes>
+            <class name="com.kozitski.triangle.time.TimeTest"/>
+        </classes>
+    </test>
+
+</suite>
